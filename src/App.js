@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Counter from './Counter'
+import Typography from '@material-ui/core/Typography'
+import CounterRecompose from './CounterRecompose'
+import 'typeface-roboto'
 
 class App extends Component {
   render() {
@@ -9,12 +11,13 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">React App</h1>
+          <Typography variant='display2' color='primary'>React App</Typography>
         </header>
-        <p className="App-intro">
+        <Typography variant='headline' paragraph>
           To get started, edit <code>src/App.js</code> and save to hot-reload the page.
-        </p>
-        <Counter />
+        </Typography>
+        <Typography variant='subheading'>Counter implementation with recompose</Typography>
+        <CounterRecompose />
       </div>
     );
   }

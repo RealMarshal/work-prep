@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import Button from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
 import { compose, withState, withHandlers, setDisplayName } from 'recompose'
 
 const withCounter = compose(
@@ -12,7 +13,7 @@ const withCounter = compose(
 
 const ClickCounter = withCounter(({value, inc, dec}) => 
   <Fragment>
-    <p>{value}</p>
+    <Typography>{value}</Typography>
     <Button color='primary' onClick={dec}>Dec</Button>
     <Button color='primary' onClick={inc}>Inc</Button>
   </Fragment>
