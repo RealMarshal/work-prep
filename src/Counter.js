@@ -1,33 +1,21 @@
-import React, { Fragment, Component } from 'react'
+import React, { Fragment } from 'react'
 import Button from '@material-ui/core/Button'
+import { compose, withState, withHandlers, setDisplayName } from 'recompose'
 
-class Counter extends Component {
+const withCounter = compose(
+  withState('value', 'setValue', 0),
+  withHandlers({
+    inc: ({setValue}) => e => setValue(n => n + 1),
+    dec: ({setValue}) => e => setValue(n => n - 1)
+  })
+)
 
-  state = {
-    value: 0
-  }
+const ClickCounter = withCounter(({value, inc, dec}) => 
+  <Fragment>
+    <p>{value}</p>
+    <Button color='primary' onClick={dec}>Dec</Button>
+    <Button color='primary' onClick={inc}>Inc</Button>
+  </Fragment>
+)
 
-  inc() {
-    this.setState(({value}) => ({
-      value: value + 1
-    }))
-  }
-
-  dec() {
-    this.setState(({value}) => ({
-      value: value - 1
-    }))
-  }
-
-  render() {
-    return (
-      <Fragment>
-        <p>{this.state.value}</p>
-        <Button color='primary' onClick={() => this.inc()}>Inc</Button>
-        <Button color='primary' onCLick={() => this.dec()}>Dec</Button>
-      </Fragment>
-    )
-  }
-}
-
-export default Counter
+export default setDisplayName('ClickCounter')(ClickCounter)
