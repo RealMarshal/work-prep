@@ -25,8 +25,8 @@ class App extends Component {
           render={(value, inc, dec) => (
             <Fragment>
               <Typography>{value}</Typography>
-              <Button color='primary' onClick={inc}>Inc</Button>
               <Button color='primary' onClick={dec}>Dec</Button>
+              <Button color='primary' onClick={inc}>Inc</Button>        
             </Fragment>
           )} 
         />
