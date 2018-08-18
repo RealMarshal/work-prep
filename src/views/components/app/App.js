@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import CounterRecompose from './CounterRecompose'
-import CounterRenderProps from './CounterRenderProps'
+import CounterFromHOC from '../counter/CounterFromHOC'
+import Counter from '../counter/CounterRP'
 import 'typeface-roboto'
 
 class App extends Component {
@@ -19,9 +19,9 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to hot-reload the page.
         </Typography>
         <Typography variant='subheading'>Counter implementation with recompose</Typography>
-        <CounterRecompose />
+        <CounterFromHOC />
         <Typography variant='subheading'>Counter implementation with render props</Typography>
-        <CounterRenderProps
+        <Counter
           render={(value, inc, dec) => (
             <Fragment>
               <Typography>{value}</Typography>
