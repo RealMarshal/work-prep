@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post should render correctly 1`] = `
+<WithStyles(Card)
+  className="post"
+>
+  <WithStyles(CardContent)
+    className="post__content"
+  >
+    <WithStyles(Typography)
+      className="post__title"
+      variant="title"
+    >
+      qewrlfda
+    </WithStyles(Typography)>
+    <WithStyles(Typography)
+      className="post__text"
+    >
+      asdmdamsdower
+    </WithStyles(Typography)>
+  </WithStyles(CardContent)>
+</WithStyles(Card)>
+`;
