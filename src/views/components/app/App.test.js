@@ -1,11 +1,12 @@
-import React from 'react';
+import React from 'react'
 import { shallow } from 'enzyme'
-import App from './App';
+import toJson from 'enzyme-to-json'
+import App from './App'
 
 describe('App', () => {
 
   const rendered = shallow(<App />)
   it('should render correctly', () => {
-    expect(rendered).toMatchSnapshot()
+    expect(toJson(rendered)).toMatchSnapshot()
   })  
 })

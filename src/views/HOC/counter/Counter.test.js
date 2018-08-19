@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { mount } from 'enzyme'
+import toJson from 'enzyme-to-json'
 import withCounter from './Counter'
 
 const CounterView = ({value, inc, dec}) => (
@@ -17,7 +18,7 @@ describe('CounterHOC', () => {
   let { value, inc, dec } = rendered.find(CounterView).props()
 
   it('should render passed component', () => {
-    expect(rendered).toMatchSnapshot()
+    expect(toJson(rendered)).toMatchSnapshot()
   })
 
   it('should pass initial value to the component', () => {
