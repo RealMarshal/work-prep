@@ -16,14 +16,14 @@ const PostsList = ({posts}) => (
       posts.data && posts.data.map(post =>
         <Post key={post.id} title={post.title} text={post.body} /> )
     }
-    { posts.error && <Typography variant='caption' color='error'>Error getting posts</Typography> }
+    { posts.error && <Typography className='post__errorMessage' variant='caption' color='error'>Ошибка получения данных</Typography> }
   </div>
 )
 
 const PostsStats = ({totalPosts, totalAuthors}) => (
   <div className='posts__postsStats'>
-    <Typography>{ totalPosts }</Typography>
-    <Typography>{ totalAuthors }</Typography>
+    <Typography className='post__totalPosts'>Постов { totalPosts }</Typography>
+    <Typography className='post__totalAuthors'>Авторов { totalAuthors }</Typography>
   </div>
 )
 
@@ -50,4 +50,5 @@ const withFetchPosts = lifecycle({
   }
 })
 
+export { PostsWrapper, PostsStats, PostsList }
 export default connect(mapStateToProps, mapDispatchToProps)(withFetchPosts(PostsWrapper))

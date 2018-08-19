@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostsStats should render correctly 1`] = `
+<div
+  className="posts__postsStats"
+>
+  <WithStyles(Typography)
+    className="post__totalPosts"
+  >
+    Постов 
+    1
+  </WithStyles(Typography)>
+  <WithStyles(Typography)
+    className="post__totalAuthors"
+  >
+    Авторов 
+    1
+  </WithStyles(Typography)>
+</div>
+`;
+
+exports[`PostsWrapper should render correctly 1`] = `
+<div
+  className="posts"
+>
+  <PostsStats
+    totalAuthors={1}
+    totalPosts={1}
+  />
+  <PostsList
+    posts={
+      Array [
+        Object {
+          "id": 3,
+          "text": "asdqwe",
+          "title": "asdas",
+        },
+      ]
+    }
+  />
+</div>
+`;
