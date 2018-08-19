@@ -1,11 +1,12 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from 'react'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
+
 import CounterFromHOC from '../counter/CounterFromHOC'
 import Counter from '../counter/CounterRP'
 
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
+import './App.css'
 import 'typeface-roboto'
 
 const App = () => (
