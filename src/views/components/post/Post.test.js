@@ -9,7 +9,7 @@ describe('Post', () => {
     title: 'qewrlfda',
     text: 'asdmdamsdower'
   }
-  const rendered = shallow(<Post title={testPost.title} text={testPost.text} />)
+  const rendered = shallow(<Post {...testPost} />)
 
   it('should render correctly', () => {
     expect(toJson(rendered)).toMatchSnapshot()
