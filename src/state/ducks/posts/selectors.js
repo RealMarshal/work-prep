@@ -16,7 +16,7 @@ const totalAuthors = createSelector(
     if (!posts.data) return 0
     const numberOfAuthors = new Set()
     posts.data.forEach(post => numberOfAuthors.add(post.userId))
-    return numberOfAuthors
+    return numberOfAuthors.size
   }
 )
 
